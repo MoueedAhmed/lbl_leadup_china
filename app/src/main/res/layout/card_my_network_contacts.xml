@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_text"
+        android:textSize="22sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="@color/black_light"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@id/img_edit"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email_address"
+        android:textSize="14sp"
+        android:layout_alignStart="@id/tv_name"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/black_light"
+        android:layout_below="@+id/tv_name"/>
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:textSize="14sp"
+        android:layout_alignStart="@id/tv_name"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/black_light"
+        android:layout_below="@+id/tv_email"/>
+
+    <ImageView
+        android:id="@+id/img_edit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/edit"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bin"
+        android:layout_margin="10dp"
+        android:layout_below="@id/tv_category"
+        android:layout_alignParentEnd="true"/>
+
+    <LinearLayout
+        android:id="@+id/layout_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_category"
+        android:layout_toStartOf="@+id/img_delete"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_whatsApp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/whatsapp_logo"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/img_phone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/phone"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/img_email"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/gmail"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_color"
+        android:layout_below="@+id/layout_number"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+
+</RelativeLayout>

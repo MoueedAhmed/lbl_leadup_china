@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/view_color"
+    tools:context=".fragments.ProjectedIncomeFragment">
+
+    <ImageView
+        android:id="@+id/img_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/login_top"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/project_income"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_click_earn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_white"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_clicks_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clicks_earning"
+                    android:textColor="@color/black_light"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                    android:id="@+id/seekClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:corner_radius="10"
+                    app:min_value="0"
+                    app:max_value="100"
+                    app:bar_color="@color/colorPrimary"
+                    app:bar_highlight_color="@color/colorAccent"
+                    app:left_thumb_color="@color/colorPrimary"
+                    app:left_thumb_color_pressed="@color/colorAccent"
+                    app:data_type="_integer"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_clicks_heading"/>
+
+                <View
+                    android:id="@+id/divider_click_earn"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/inactive"
+                    android:layout_below="@id/seekClick"/>
+
+                <TextView
+                    android:id="@+id/tv_clicks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clicks"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignEnd="@id/divider_click_earn"
+                    android:layout_alignBottom="@id/divider_click_earn"/>
+
+                <TextView
+                    android:id="@+id/tv_clicks_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_alignStart="@id/tv_clicks"
+                    android:layout_alignEnd="@id/tv_clicks"
+                    android:layout_above="@id/tv_clicks"/>
+
+                <TextView
+                    android:id="@+id/tv_earning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/earnings_small"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignStart="@id/divider_click_earn"
+                    android:layout_alignBottom="@id/divider_click_earn"/>
+
+                <TextView
+                    android:id="@+id/tv_earning_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_alignStart="@id/tv_earning"
+                    android:layout_above="@id/tv_earning"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_watch_earn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_white"
+                android:layout_margin="5dp"
+                android:layout_below="@id/layout_click_earn">
+
+                <TextView
+                    android:id="@+id/tv_watch_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/video_earning"
+                    android:textColor="@color/black_light"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                    android:id="@+id/watch_seek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:corner_radius="10"
+                    app:min_value="0"
+                    app:max_value="100"
+                    app:bar_color="@color/colorPrimary"
+                    app:bar_highlight_color="@color/colorAccent"
+                    app:left_thumb_color="@color/colorPrimary"
+                    app:left_thumb_color_pressed="@color/colorAccent"
+                    app:data_type="_integer"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_watch_heading"/>
+
+                <View
+                    android:id="@+id/divider_watch_earn"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/inactive"
+                    android:layout_below="@id/watch_seek"/>
+
+                <TextView
+                    android:id="@+id/tv_watch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/watch"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignEnd="@id/divider_watch_earn"
+                    android:layout_alignBottom="@id/divider_watch_earn"/>
+
+                <TextView
+                    android:id="@+id/tv_video_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_alignStart="@id/tv_watch"
+                    android:layout_alignEnd="@id/tv_watch"
+                    android:layout_above="@id/tv_watch"/>
+
+                <TextView
+                    android:id="@+id/tv_watch_earning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/earnings_small"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignStart="@id/divider_watch_earn"
+                    android:layout_alignBottom="@id/divider_watch_earn"/>
+
+                <TextView
+                    android:id="@+id/tv_watch_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_alignStart="@id/tv_watch_earning"
+                    android:layout_above="@id/tv_watch_earning"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_network_earn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_white"
+                android:layout_margin="5dp"
+                android:layout_below="@id/layout_watch_earn">
+
+                <TextView
+                    android:id="@+id/tv_network_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/network_earning"
+                    android:textColor="@color/black_light"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                    android:id="@+id/network_seek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:corner_radius="10"
+                    app:min_value="0"
+                    app:max_value="100"
+                    app:bar_color="@color/colorPrimary"
+                    app:bar_highlight_color="@color/colorAccent"
+                    app:left_thumb_color="@color/colorPrimary"
+                    app:left_thumb_color_pressed="@color/colorAccent"
+                    app:data_type="_integer"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_network_heading"/>
+
+                <View
+                    android:id="@+id/divider_network_earn"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/inactive"
+                    android:layout_below="@id/network_seek"/>
+
+                <TextView
+                    android:id="@+id/tv_network"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/network"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignEnd="@id/divider_network_earn"
+                    android:layout_alignBottom="@id/divider_network_earn"/>
+
+                <TextView
+                    android:id="@+id/tv_network_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_alignStart="@id/tv_network"
+                    android:layout_alignEnd="@id/tv_network"
+                    android:layout_above="@id/tv_network"/>
+
+                <TextView
+                    android:id="@+id/tv_network_earning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/earnings_small"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignStart="@id/divider_network_earn"
+                    android:layout_alignBottom="@id/divider_network_earn"/>
+
+                <TextView
+                    android:id="@+id/tv_network_earning_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_alignStart="@id/tv_network_earning"
+                    android:layout_above="@id/tv_network_earning"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_share_earn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_white"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/layout_network_earn">
+
+                <TextView
+                    android:id="@+id/tv_share_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_earning"
+                    android:textColor="@color/black_light"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                    android:id="@+id/share_seek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:corner_radius="10"
+                    app:min_value="0"
+                    app:max_value="100"
+                    app:bar_color="@color/colorPrimary"
+                    app:bar_highlight_color="@color/colorAccent"
+                    app:left_thumb_color="@color/colorPrimary"
+                    app:left_thumb_color_pressed="@color/colorAccent"
+                    app:data_type="_integer"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_share_heading"/>
+
+                <View
+                    android:id="@+id/divider_share_earn"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/inactive"
+                    android:layout_below="@id/share_seek"/>
+
+                <TextView
+                    android:id="@+id/tv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignEnd="@id/divider_share_earn"
+                    android:layout_alignBottom="@id/divider_share_earn"/>
+
+                <TextView
+                    android:id="@+id/tv_share_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_alignStart="@id/tv_share"
+                    android:layout_alignEnd="@id/tv_share"
+                    android:layout_above="@id/tv_share"/>
+
+                <TextView
+                    android:id="@+id/tv_share_earning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/earnings_small"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignStart="@id/divider_share_earn"
+                    android:layout_alignBottom="@id/divider_share_earn"/>
+
+                <TextView
+                    android:id="@+id/tv_share_earning_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:textColor="@color/black_light"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_alignStart="@id/tv_share_earning"
+                    android:layout_above="@id/tv_share_earning"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

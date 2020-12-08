@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.ingenious.lblleadup"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 6
+        versionName "3.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //External Library
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+    implementation 'com.pixplicity.easyprefs:library:1.9.0'
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Retrofit JSON Parsing
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    //Lottie for Animations
+    implementation 'com.airbnb.android:lottie:3.0.7'
+
+    //Image View Shape
+    implementation 'com.github.florent37:shapeofview:1.4.7'
+
+    //TextView Show less show more
+    implementation 'com.github.mahimrocky:ShowMoreText:1.0.2'
+
+    //Image Picker
+    implementation 'com.github.dhaval2404:imagepicker:1.6'
+
+    //Video Picker
+    implementation 'com.github.jaiselrahman:FilePicker:1.3.2'
+
+    //Video Player
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    //EasyPermissions
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    //seek Bar
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+
+    //Image Picker
+    implementation 'com.github.dhaval2404:imagepicker:1.6'
+
+    //HTML Viewer
+    implementation 'com.github.mukeshsolanki:MarkdownView-Android:1.1.0'
+}

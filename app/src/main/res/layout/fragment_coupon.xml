@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/semi_white"
+    tools:context=".fragments.CouponFragment">
+
+    <ImageView
+        android:id="@+id/img_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/login_top"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coupon_discount"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Brands -->
+            <TextView
+                android:id="@+id/tv_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brands"
+                android:textStyle="bold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_brand_viewAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_all"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@id/tv_brand"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/view_all_rectangle"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_brand"/>
+
+            <!-- Category -->
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textStyle="bold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/rvBrand"/>
+
+            <TextView
+                android:id="@+id/tv_category_viewAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_all"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@id/tv_category"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/view_all_rectangle"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_category"/>
+
+            <!-- Coupons -->
+            <TextView
+                android:id="@+id/tv_coupons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coupons"
+                android:textStyle="bold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/rvCategory"/>
+
+            <TextView
+                android:id="@+id/tv_coupons_viewAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_all"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@id/tv_coupons"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/view_all_rectangle"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCoupons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_coupons"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

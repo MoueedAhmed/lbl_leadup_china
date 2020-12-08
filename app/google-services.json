@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1085161193706",
+    "firebase_url": "https://lbl-leadup.firebaseio.com",
+    "project_id": "lbl-leadup",
+    "storage_bucket": "lbl-leadup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085161193706:android:27371b45c8b1ae048f5793",
+        "android_client_info": {
+          "package_name": "com.ingenious.lblleadup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085161193706-k6e3c19cuctil06tqttsbjfs7jp8vnm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ingenious.lblleadup",
+            "certificate_hash": "792cebc57cda8b48448175464c812f9578836372"
+          }
+        },
+        {
+          "client_id": "1085161193706-uif0j64rnn50v517ippu655v9jra1ubn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr2zLaziTKyTAZzs6AlcrFrczokhWIJxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085161193706-uif0j64rnn50v517ippu655v9jra1ubn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

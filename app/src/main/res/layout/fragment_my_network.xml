@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/semi_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MyNetworkFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_top"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/top_header_large"/>
+
+            <ImageView
+                android:id="@+id/img_earning_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/my_network_shad"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_leads"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/img_earning_icon"
+                android:layout_centerHorizontal="true" />
+
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:id="@+id/shape_pros_count"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:shape_circle_borderColor="@color/black_light"
+                app:shape_circle_borderWidth="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/img_top"
+                android:layout_marginTop="20dp">
+
+                <!-- YOUR CONTENT -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_total_prospector_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zero"
+                        android:textColor="@color/black_light"
+                        android:textSize="30sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <TextView
+                android:id="@+id/tv_tol_pros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_prospects"
+                android:textSize="25sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/black_light"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/shape_pros_count"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:id="@+id/divider_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/inactive"
+                android:layout_below="@+id/tv_tol_pros"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_add_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_new"
+                android:textColor="@color/black_light"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/divider_1"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/layout_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/tv_add_new"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_by_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_white"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/by_phone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/by_phone"
+                        android:textColor="@color/black_light"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_by_manually"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_white"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/by_manually" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/by_manually"
+                        android:textColor="@color/black_light"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

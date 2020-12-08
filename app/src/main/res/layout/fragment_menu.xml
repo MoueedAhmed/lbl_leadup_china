@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MenuFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiant">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent">
+
+                <com.github.florent37.shapeofview.shapes.CircleView
+                    android:id="@+id/shape_img_avatar"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="20dp">
+
+                    <!-- YOUR CONTENT -->
+                    <ImageView
+                        android:id="@+id/img_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/avatar"
+                        android:scaleType="fitXY"/>
+
+                </com.github.florent37.shapeofview.shapes.CircleView>
+
+                <ImageView
+                    android:id="@+id/img_edit_pic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_camera"
+                    android:layout_alignEnd="@id/shape_img_avatar"
+                    android:layout_alignBottom="@id/shape_img_avatar"
+                    android:layout_marginBottom="30dp"/>
+
+                <ImageView
+                    android:id="@+id/img_notification"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/notification_bell"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/shape_img_avatar"
+                    android:layout_alignTop="@id/shape_img_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_token"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@drawable/gradiant"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginTop="13dp"
+                    android:layout_alignStart="@id/tv_name"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="30dp"
+                    android:layout_alignEnd="@id/img_notification"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:ellipsize="end" />
+
+                <ImageView
+                    android:id="@+id/img_copy"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/copy"
+                    android:layout_alignBottom="@id/tv_token"
+                    android:layout_alignTop="@id/tv_token"
+                    android:layout_alignEnd="@id/tv_token"
+                    android:layout_marginEnd="5dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_income_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layout_top">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.github.florent37.shapeofview.shapes.CircleView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:shape_circle_borderColor="@color/white"
+                        app:shape_circle_borderWidth="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <!-- YOUR CONTENT -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_all_time_Earning"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/zero"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:textAlignment="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/all_time_earn"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.shapeofview.shapes.CircleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.github.florent37.shapeofview.shapes.CircleView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:shape_circle_borderColor="@color/white"
+                        app:shape_circle_borderWidth="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <!-- YOUR CONTENT -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_this_month_earning"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/zero"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:textAlignment="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/current_earning"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.shapeofview.shapes.CircleView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_income_report"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_earning_dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ripple">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/earning_dashboard"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/earning_dashboard"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_my_leads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ripple">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/my_leads"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_network"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_fund_transfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ripple">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/funds_transfer"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fund_transfer"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_coupons_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ripple">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/coupons_discount"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/coupon_discount"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
